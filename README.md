@@ -92,9 +92,15 @@ mono packages/Xamarin.UITest.[version]/tools/test-cloud.exe submit yourAppFile.a
 
 Run the command from the directory that contains the NuGet packages directory. Also, make sure you update your app name and the directory of tests. If your app file is not in the same directory as the NuGet packages, please include a direct path to the file.
 
-Categories:
---category "all"
+Example:
+from here:
+/Users/myusername/SimpleUITestApp
 
+Run:
+mono packages/Xamarin.UITest.1.3.15/tools/test-cloud.exe submit Droid/bin/Debug/com.minnick.simpleuitestapp.apk ceMYAPIKEY31dd3FD3e809971 --devices 4b1b0c03 --series "master" --locale "en_US" --app-name "SimpleUITestApp" --user MyEmail@xamarin.com --assembly-dir UITests/bin/Debug
+
+Categories:
+--category "myFavorite"
 
 <ul>
 <li>Cross Platform Properties you can Access:</li>
