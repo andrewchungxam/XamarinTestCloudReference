@@ -97,11 +97,11 @@ Categories:
 
 
 <ul>
-Cross Platform Properties you can Access:
-Properties you can access:
-Android/iOS -> “id"
-Android -> “contentDescription"
-iOS -> “accessibilityLabel” or "accessibilityIdentifier"
+<li>Cross Platform Properties you can Access:</li>
+<li>Properties you can access:</li>
+<li>Android/iOS -> “id"</li>
+<li>Android -> “contentDescription"</li>
+<li>iOS -> “accessibilityLabel” or "accessibilityIdentifier"</li>
 </ul>
 
 
