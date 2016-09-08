@@ -53,27 +53,27 @@ Device Numbers:
 <li>var deviceNumber = Environment.GetEnvironmentVariable ("XTC_DEVICE_INDEX");
 </ul>
 
-App Configuration:
-//On iOS - Simulator
+App Configuration:<br/>
+//On iOS - Simulator<br/>
 return ConfigureApp
-.iOS
-.AppBundle ("../../../iOS/bin/iPhoneSimulator/Debug/XamarinForms.iOS.app")
-.DeviceIdentifier (“KJ23d-45648-55D3E-WEF784F0”) // Your simulator device ID
-.AppBundle("/Users/USERNAME/Projects/MyFavorite.app")
+.iOS<br/>
+.AppBundle ("../../../iOS/bin/iPhoneSimulator/Debug/XamarinForms.iOS.app")<br/>
+.DeviceIdentifier (“KJ23d-45648-55D3E-WEF784F0”) // Your simulator device ID<br/>
+.AppBundle("/Users/USERNAME/Projects/MyFavorite.app")<br/>
 
-//On iOS - Device
-return ConfigureApp
-.iOS
-.DeviceIdentifier (“e2342asdfa8asdofhiaesd932h3")
-.DeviceIp ("10.0.9.33")
-.InstalledApp (“com.myfavoriteapp")
-.StartApp();
+//On iOS - Device<br/>
+return ConfigureApp<br/>
+.iOS<br/>
+.DeviceIdentifier (“e2342asdfa8asdofhiaesd932h3")<br/>
+.DeviceIp ("10.0.9.33")<br/>
+.InstalledApp (“com.myfavoriteapp")<br/>
+.StartApp();<br/>
 
-//On Android
-return ConfigureApp
-.Android
-.ApkFile("com.myfavoriteapp.apk”) // example implies file is in SolutionFolder > bin > Debug
-.StartApp ();
+//On Android<br/>
+return ConfigureApp<br/>
+.Android<br/>
+.ApkFile("com.myfavoriteapp.apk”) // example implies file is in SolutionFolder > bin > Debug<br/>
+.StartApp ();<br/>
 
 <ol>
 Setup Issues:
