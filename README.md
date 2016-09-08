@@ -110,10 +110,10 @@ XAML:
  `< Button x:Name="b" AutomationId="MyButton" Text="Click me" /> ` 
 
 C#:
-    var l = new Label {
-        Text = "Hello, Xamarin.Forms!",
-        AutomationId = "MyLabel"
-    };
+    `< var l = new Label { `
+        `Text = "Hello, Xamarin.Forms!",`
+        `AutomationId = "MyLabel"`
+    `};`
 
 app.Query(x=>x.Marked(“theGoodWord”));
 By using ‘Marked' - you’ll pick up all of the above on iOS / Android
