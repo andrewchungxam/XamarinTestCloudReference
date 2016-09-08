@@ -26,28 +26,34 @@ Common Queries:
 <li>app.Query(x => x.All("*").Class("UITextFieldLabel"));
 <li>app.Query(x => x.All("*").Class("UITextFieldLabel"));
 <li>app.Query(x => x.All("*").Class("UITextFieldLabel").Text("User ID"));
+</ul>
 <ul>
 Complex Combinations:
 <li>app.Tap (x => x.Text ("Eating Healthy").Sibling ("TheClassName")
 <li>app.Tap (x => x.Text ("Eating Healthy").Sibling ("*").Id ("send_segment"));
-</ul><ul>
+</ul>
+<ul>
 Common Assertions:
 <li>Assert.IsTrue(app.Query(q => q.Marked("logoutButton”)).Any());
 <li>Assert.IsFalse(app.Query(q => q.Marked(“logoutButton")).Any());
 <li>app.WaitForElement(q => q.Marked("logoutButton"));
-</ul><ul>
+</ul>
+<ul>
 System C# + UITest:
 <li>var joinedUsername = string.Format (“myemail_{0}@microsoft.com", deviceNumber);
 <li>var joinedUsername = $”myemail_{deviceNumber}@microsoft.com”;
-</ul><ul>
+</ul>
+<ul>
 Sleep/Wait:
 <li>Thread.Sleep (3000); //this would be 3 seconds
 <li>Thread.Sleep (TimeSpan.FromMinutes (4));
 <li>app.WaitForElement (x => x.Text (“Community Terms of Use"));
-</ul><ul>
+</ul>
+<ul>
 Device Numbers:
 <li>var deviceNumber = Environment.GetEnvironmentVariable ("XTC_DEVICE_INDEX");
 </ul>
+
 App Configuration:
 //On iOS - Simulator
 return ConfigureApp
@@ -77,6 +83,7 @@ Setup Issues:
 <li> Unable to Instrument app:
 - iOS - make sure to add the Calabash Test Server to your app - and make start it in your app delegate</li>
 </ol>
+
 Command Line:
 Windows:
 packages\Xamarin.UITest.[version]\tools\test-cloud.exe submit yourAppFile.apk thePRIVATENotRealAPINumber00071 --devices 4b1b0c03 --series "master" --locale "en_US" --app-name "SimpleUITestApp" --user andrew.chung@xamarin.com --assembly-dir pathToTestDllFolder
@@ -89,15 +96,20 @@ Run the command from the directory that contains the NuGet packages directory. A
 Categories:
 --category "all"
 
+
+<ul>
 Cross Platform Properties you can Access:
 Properties you can access:
 Android/iOS -> “id"
 Android -> “contentDescription"
 iOS -> “accessibilityLabel” or "accessibilityIdentifier"
+</ul>
+
 
 Setting “AutomationID" Xamarin.Forms in iOS & Android assign the contentDescription and accessibilityIdentifier
 XAML:
 <Button x:Name="b" AutomationId="MyButton" Text="Click me"/>
+
 C#:
 var l = new Label {
     Text = "Hello, Xamarin.Forms!",
@@ -114,7 +126,7 @@ using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Querie
 
 namespace MySampleApplication
 {
-public class HomePage: BasePage
+    public class HomePage: BasePage
     {
         readonly Query TitleBar;
         readonly Query SearchBtn;
@@ -132,9 +144,10 @@ public class HomePage: BasePage
                 TitleBar = x => x.Marked("Hello");
             }
         }
+    }
 }
 
-^ Use the above in a test like app.Tap(TitleBar);
+^ Use the above in a test (ex.  app.Tap(TitleBar);   )
 
 Clearing App instead of Deleting it (latest version of UITest)
 app = ConfigureApp
