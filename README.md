@@ -111,10 +111,10 @@ XAML:
 <Button x:Name="b" AutomationId="MyButton" Text="Click me"/>
 
 C#:
-var l = new Label {
-    Text = "Hello, Xamarin.Forms!",
-    AutomationId = "MyLabel"
-};
+    var l = new Label {
+        Text = "Hello, Xamarin.Forms!",
+        AutomationId = "MyLabel"
+    };
 
 app.Query(x=>x.Marked(“theGoodWord”));
 By using ‘Marked' - you’ll pick up all of the above on iOS / Android
@@ -124,28 +124,29 @@ Simplest way to do cross platform tests is to name the controls the same on iOS 
 "Cross Platform Readiness"
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
-namespace MySampleApplication
-{
-    public class HomePage: BasePage
+    namespace MySampleApplication
     {
+        public class HomePage: BasePage
+        {
         readonly Query TitleBar;
         readonly Query SearchBtn;
 
-        public HomePage()
-        {
-            if (OnAndroid)
+            public HomePage()
             {
+        
+                if (OnAndroid)
+                {
                 TitleBar = x => x.Id("toolbar_title");
                 SearchBtn = x => x.Id("fab_button");
-            }
+                }
 
-            if (OniOS)
-            {
+                if (OniOS)
+                {
                 TitleBar = x => x.Marked("Hello");
+                }
             }
         }
     }
-}
 
 ^ Use the above in a test (ex.  app.Tap(TitleBar);   )
 
