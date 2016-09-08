@@ -1,16 +1,15 @@
 # XamarinTestCloudReference
 XamarinTestCloudReference
 
-Common repl commands:
-tree
-
+<ul>Common repl commands:
+<li>tree</li>
 app.Flash(“myButton”);
 app.Flash(x=>x.All(“*”));
 app.Flash(x => x.All("*").Class("UITextFieldLabel").Text("User ID"));
 app.TapCoordinates(153, 86);
 app.Repl ();
 copy
-
+</ul>
 Common UI commands:
 app.DismissKeyboard ();
 app.Screenshot ("User enters phone number");
