@@ -160,4 +160,4 @@ https://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/
 
 -------
 
-Thank you to Jwhite, Mahdi, Brandon, June, Mike Watson, Brad, and Ian Leatherbury
+Thank you to JWhite, Mahdi, Brandon, June, Mike Watson, Brad, and Ian Leatherbury
