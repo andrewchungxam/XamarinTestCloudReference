@@ -9,8 +9,9 @@ XamarinTestCloudReference
 <li>app.TapCoordinates(153, 86);</li>
 <li>app.Repl ();</li>
 <li>copy
+</ul>
 <ul>
-<ul>Common UI commands:
+Common UI commands:
 <li>app.DismissKeyboard ();</li>
 <li>app.Screenshot ("User enters phone number");</li>
 <li>app.EnterText (x => x.Id ("edit_phone"), "5555555555");</li>
