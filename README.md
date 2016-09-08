@@ -83,11 +83,11 @@ Setup Issues:
 - iOS - make sure to add the Calabash Test Server to your app - and make start it in your app delegate</li>
 </ol>
 
-Command Line:
-Windows:
+Command Line:<br/>
+Windows:<br/>
 packages\Xamarin.UITest.[version]\tools\test-cloud.exe submit yourAppFile.apk thePRIVATENotRealAPINumber00071 --devices 4b1b0c03 --series "master" --locale "en_US" --app-name "SimpleUITestApp" --user myemail@xamarin.com --assembly-dir pathToTestDllFolder
 
-OS X:
+OS X:<br/>
 mono packages/Xamarin.UITest.[version]/tools/test-cloud.exe submit yourAppFile.apk thePRIVATENotRealAPINumber00071 --devices 4b1b0c03 --series "master" --locale "en_US" --app-name "SimpleUITestApp" --user myemail@xamarin.com --assembly-dir pathToTestDllFolder
 
 Run the command from the directory that contains the NuGet packages directory. Also, make sure you update your app name and the directory of tests. If your app file is not in the same directory as the NuGet packages, please include a direct path to the file.
@@ -115,7 +115,7 @@ C#:
         `AutomationId = "MyLabel"`
     `};`
 
-app.Query(x=>x.Marked(“theGoodWord”));
+Then in your test: `app.Query(x=>x.Marked(“theGoodWord”));`
 By using ‘Marked' - you’ll pick up all of the above on iOS / Android
 
 Simplest way to do cross platform tests is to name the controls the same on iOS and Android
@@ -150,10 +150,10 @@ using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Querie
 ^ Use the above in a test (ex.  app.Tap(TitleBar);   )
 
 Clearing App instead of Deleting it (latest version of UITest)
-app = ConfigureApp
-                .Android
-                .ApkFile("app_path")
-                .StartApp(Xamarin.UITest.Configuration.AppDataMode.Clear);
+`app = ConfigureApp`
+               ` .Android`
+               ` .ApkFile("app_path")`
+                `.StartApp(Xamarin.UITest.Configuration.AppDataMode.Clear);`
 
 Xamarin Documentation has a more in-depth Cheat Sheet:
 https://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/
