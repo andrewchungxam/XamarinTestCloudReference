@@ -107,7 +107,7 @@ iOS -> “accessibilityLabel” or "accessibilityIdentifier"
 
 Setting “AutomationID" Xamarin.Forms in iOS & Android assign the contentDescription and accessibilityIdentifier
 XAML:
- Button x:Name="b" AutomationId="MyButton" Text="Click me" 
+ `< Button x:Name="b" AutomationId="MyButton" Text="Click me" /> ` 
 
 C#:
     var l = new Label {
