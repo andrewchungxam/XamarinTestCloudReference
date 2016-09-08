@@ -3,49 +3,50 @@ XamarinTestCloudReference
 
 <ul>Common repl commands:
 <li>tree</li>
-app.Flash(“myButton”);
-app.Flash(x=>x.All(“*”));
-app.Flash(x => x.All("*").Class("UITextFieldLabel").Text("User ID"));
-app.TapCoordinates(153, 86);
-app.Repl ();
-copy
+<li>app.Flash(“myButton”);</li>
+<li>app.Flash(x=>x.All(“*”));</li>
+<li>app.Flash(x => x.All("*").Class("UITextFieldLabel").Text("User ID"));</li>
+<li>app.TapCoordinates(153, 86);</li>
+<li>app.Repl ();</li>
+<li>copy
+<ul>
+<ul>Common UI commands:
+<li>app.DismissKeyboard ();</li>
+<li>app.Screenshot ("User enters phone number");</li>
+<li>app.EnterText (x => x.Id ("edit_phone"), "5555555555");</li>
+<li>app.ScrollDownTo ("CREATE", "linear_item");</li>
+<li>app.SwipeRightToLeft (c => c.Id ("txt_title"));</li>
+<li>app.DragCoordinates (200, 400, 200, 800); // (from X, from Y, to X, to Y)</li>
 </ul>
-Common UI commands:
-app.DismissKeyboard ();
-app.Screenshot ("User enters phone number");
-app.EnterText (x => x.Id ("edit_phone"), "5555555555");
-app.ScrollDownTo ("CREATE", "linear_item");
-app.SwipeRightToLeft (c => c.Id ("txt_title"));
-app.DragCoordinates (200, 400, 200, 800); // (from X, from Y, to X, to Y)
-
+<ul>
 Common Queries:
-app.Query("UITextFieldLabel");
-app.Query(x => x.All("*"));
-app.Query(x => x.All("*").Class("UITextFieldLabel"));
-app.Query(x => x.All("*").Class("UITextFieldLabel"));
-app.Query(x => x.All("*").Class("UITextFieldLabel").Text("User ID"));
-
+<li>app.Query("UITextFieldLabel");
+<li>app.Query(x => x.All("*"));
+<li>app.Query(x => x.All("*").Class("UITextFieldLabel"));
+<li>app.Query(x => x.All("*").Class("UITextFieldLabel"));
+<li>app.Query(x => x.All("*").Class("UITextFieldLabel").Text("User ID"));
+<ul>
 Complex Combinations:
-app.Tap (x => x.Text ("Eating Healthy").Sibling ("TheClassName")
-app.Tap (x => x.Text ("Eating Healthy").Sibling ("*").Id ("send_segment"));
-
+<li>app.Tap (x => x.Text ("Eating Healthy").Sibling ("TheClassName")
+<li>app.Tap (x => x.Text ("Eating Healthy").Sibling ("*").Id ("send_segment"));
+</ul><ul>
 Common Assertions:
-Assert.IsTrue(app.Query(q => q.Marked("logoutButton”)).Any());
-Assert.IsFalse(app.Query(q => q.Marked(“logoutButton")).Any());
-app.WaitForElement(q => q.Marked("logoutButton"));
-
+<li>Assert.IsTrue(app.Query(q => q.Marked("logoutButton”)).Any());
+<li>Assert.IsFalse(app.Query(q => q.Marked(“logoutButton")).Any());
+<li>app.WaitForElement(q => q.Marked("logoutButton"));
+</ul><ul>
 System C# + UITest:
-var joinedUsername = string.Format (“myemail_{0}@microsoft.com", deviceNumber);
-var joinedUsername = $”myemail_{deviceNumber}@microsoft.com”;
-
+<li>var joinedUsername = string.Format (“myemail_{0}@microsoft.com", deviceNumber);
+<li>var joinedUsername = $”myemail_{deviceNumber}@microsoft.com”;
+</ul><ul>
 Sleep/Wait:
-Thread.Sleep (3000); //this would be 3 seconds
-Thread.Sleep (TimeSpan.FromMinutes (4));
-app.WaitForElement (x => x.Text (“Community Terms of Use"));
-
+<li>Thread.Sleep (3000); //this would be 3 seconds
+<li>Thread.Sleep (TimeSpan.FromMinutes (4));
+<li>app.WaitForElement (x => x.Text (“Community Terms of Use"));
+</ul><ul>
 Device Numbers:
-var deviceNumber = Environment.GetEnvironmentVariable ("XTC_DEVICE_INDEX");
-
+<li>var deviceNumber = Environment.GetEnvironmentVariable ("XTC_DEVICE_INDEX");
+</ul>
 App Configuration:
 //On iOS - Simulator
 return ConfigureApp
@@ -68,12 +69,13 @@ return ConfigureApp
 .ApkFile("com.myfavoriteapp.apk”) // example implies file is in SolutionFolder > bin > Debug
 .StartApp ();
 
+<ol>
 Setup Issues:
-1) SetUp : System.Exception : Unable to start CalabashHostStrategyProxy
-- Close down your Terminal/Repl then try running the test again
-2) Unable to Instrument app:
-- iOS - make sure to add the Calabash Test Server to your app - and make start it in your app delegate
-
+<li>SetUp : System.Exception : Unable to start CalabashHostStrategyProxy
+- Close down your Terminal/Repl then try running the test again</li>
+<li> Unable to Instrument app:
+- iOS - make sure to add the Calabash Test Server to your app - and make start it in your app delegate</li>
+</ol>
 Command Line:
 Windows:
 packages\Xamarin.UITest.[version]\tools\test-cloud.exe submit yourAppFile.apk thePRIVATENotRealAPINumber00071 --devices 4b1b0c03 --series "master" --locale "en_US" --app-name "SimpleUITestApp" --user andrew.chung@xamarin.com --assembly-dir pathToTestDllFolder
