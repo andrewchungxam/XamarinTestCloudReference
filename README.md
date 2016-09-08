@@ -97,7 +97,7 @@ from here:</br>
 /Users/myusername/SimpleUITestApp
 
 Run:</br>
-mono packages/Xamarin.UITest.1.3.15/tools/test-cloud.exe submit Droid/bin/Debug/com.minnick.simpleuitestapp.apk ceMYAPIKEY31dd3FD3e809971 --devices 4b1b0c03 --series "master" --locale "en_US" --app-name "SimpleUITestApp" --user MyEmail@xamarin.com --assembly-dir UITests/bin/Debug
+mono packages/Xamarin.UITest.1.3.15/tools/test-cloud.exe submit Droid/bin/Debug/com.minnick.simpleuitestapp.apk ceMYAPIKEY31dd3FD3234371 --devices 4b1b0c03 --series "master" --locale "en_US" --app-name "SimpleUITestApp" --user MyEmail@xamarin.com --assembly-dir UITests/bin/Debug
 
 Categories:
 --category "myFavorite"
