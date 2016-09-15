@@ -17,6 +17,7 @@ Common UI commands:
 <li>app.ScrollDownTo ("CREATE", "linear_item");</li>
 <li>app.SwipeRightToLeft (c => c.Id ("txt_title"));</li>
 <li>app.DragCoordinates (200, 400, 200, 800); // (from X, from Y, to X, to Y)</li>
+<li>app.Query(x=>x.Class("FormsTextView").Index(0)) </li>
 </ul>
 <ul>
 Common Queries:
