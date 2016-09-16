@@ -2,8 +2,8 @@
 
 <ul>Common repl commands:
 <li>tree</li>
-<li>app.Flash(“myButton”);</li>
-<li>app.Flash(x=>x.All(“*”));</li>
+<li>app.Flash("myButton");</li>
+<li>app.Flash(x=>x.All("*"));</li>
 <li>app.Flash(x => x.All("*").Class("UITextFieldLabel").Text("User ID"));</li>
 <li>app.TapCoordinates(153, 86);</li>
 <li>app.Repl ();</li>
@@ -35,19 +35,19 @@ Complex Combinations:
 <ul>
 Common Assertions:
 <li>Assert.IsTrue(app.Query(q => q.Marked("logoutButton”)).Any());
-<li>Assert.IsFalse(app.Query(q => q.Marked(“logoutButton")).Any());
+<li>Assert.IsFalse(app.Query(q => q.Marked("logoutButton")).Any());
 <li>app.WaitForElement(q => q.Marked("logoutButton"));
 </ul>
 <ul>
 System C# + UITest:
-<li>var joinedUsername = string.Format (“myemail_{0}@microsoft.com", deviceNumber);
-<li>var joinedUsername = $”myemail_{deviceNumber}@microsoft.com”;
+<li>var joinedUsername = string.Format ("myemail_{0}@microsoft.com", deviceNumber);
+<li>var joinedUsername = $"myemail_{deviceNumber}@microsoft.com";
 </ul>
 <ul>
 Sleep/Wait:
 <li>Thread.Sleep (3000); //this would be 3 seconds
 <li>Thread.Sleep (TimeSpan.FromMinutes (4));
-<li>app.WaitForElement (x => x.Text (“Community Terms of Use"));
+<li>app.WaitForElement (x => x.Text ("Community Terms of Use"));
 </ul>
 <ul>
 Device Numbers:
@@ -59,21 +59,21 @@ App Configuration:<br/>
 return ConfigureApp
 .iOS<br/>
 .AppBundle ("../../../iOS/bin/iPhoneSimulator/Debug/XamarinForms.iOS.app")<br/>
-.DeviceIdentifier (“KJ23d-45648-55D3E-WEF784F0”) // Your simulator device ID<br/>
+.DeviceIdentifier ("KJ23d-45648-55D3E-WEF784F0") // Your simulator device ID<br/>
 .AppBundle("/Users/USERNAME/Projects/MyFavorite.app")<br/>
 
 //On iOS - Device<br/>
 return ConfigureApp<br/>
 .iOS<br/>
-.DeviceIdentifier (“e2342asdfa8asdofhiaesd932h3")<br/>
+.DeviceIdentifier ("e2342asdfa8asdofhiaesd932h3")<br/>
 .DeviceIp ("10.0.9.33")<br/>
-.InstalledApp (“com.myfavoriteapp")<br/>
+.InstalledApp ("com.myfavoriteapp")<br/>
 .StartApp();<br/>
 
 //On Android<br/>
 return ConfigureApp<br/>
 .Android<br/>
-.ApkFile("com.myfavoriteapp.apk”) // example implies file is in SolutionFolder > bin > Debug<br/>
+.ApkFile("com.myfavoriteapp.apk") // example implies file is in SolutionFolder > bin > Debug<br/>
 .StartApp ();<br/>
 
 <ol>
@@ -122,7 +122,7 @@ C#:
         `AutomationId = "MyLabel"`
     `};`
 
-Then in your test: `app.Query(x=>x.Marked(“theGoodWord”));`
+Then in your test: `app.Query(x=>x.Marked("theGoodWord"));`
 By using ‘Marked' - you’ll pick up all of the above on iOS / Android
 
 Simplest way to do cross platform tests is to name the controls the same on iOS and Android
@@ -167,4 +167,4 @@ https://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/
 
 -------
 
-Thank you to JWhite, Mahdi, Brandon, June, Mike Watson, Brad, and Ian Leatherbury
+Thank you to JWhite, Mahdi, Brandon, June, Mike Watson, Brad, AdamB, and Ian Leatherbury
