@@ -24,7 +24,8 @@ Common UI commands:
 <ul>
 Common Queries:
 <li>app.Query("UITextFieldLabel");
-<li>app.Query(); //please confirm
+<li>app.Query(); 
+<li>app.Query(x => x.All());
 <li>app.Query(x => x.All("*"));
 <li>app.Query(x => x.All("*").Class("UITextFieldLabel"));
 <li>app.Query(x => x.All("*").Class("UITextFieldLabel").Text("User ID"));
