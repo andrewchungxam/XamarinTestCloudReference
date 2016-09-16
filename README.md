@@ -1,5 +1,7 @@
 # XamarinTestCloudReference
 
+//Note - smart quotes will not work in Repl/XTC
+
 <ul>Common repl commands:
 <li>tree</li>
 <li>app.Flash("myButton");</li>
@@ -34,7 +36,7 @@ Complex Combinations:
 </ul>
 <ul>
 Common Assertions:
-<li>Assert.IsTrue(app.Query(q => q.Marked("logoutButton”)).Any());
+<li>Assert.IsTrue(app.Query(q => q.Marked("logoutButton")).Any());
 <li>Assert.IsFalse(app.Query(q => q.Marked("logoutButton")).Any());
 <li>app.WaitForElement(q => q.Marked("logoutButton"));
 </ul>
