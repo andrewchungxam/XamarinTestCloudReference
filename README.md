@@ -165,6 +165,8 @@ Clearing App instead of Deleting it (latest version of UITest)
                ` .ApkFile("app_path")`
                 `.StartApp(Xamarin.UITest.Configuration.AppDataMode.Clear);`
 
+ADDING MULTIPLE USERS
+
 `			var deviceNumber = Environment.GetEnvironmentVariable ("XTC_DEVICE_INDEX");`
 
 `			var joinedUsername = string.Format ("myemail_{0}@microsoft.com", deviceNumber);`
