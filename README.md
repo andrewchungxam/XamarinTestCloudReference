@@ -168,6 +168,9 @@ Clearing App instead of Deleting it (latest version of UITest)
 Xamarin Documentation has a more in-depth Cheat Sheet:
 https://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/
 
+'			var deviceNumber = Environment.GetEnvironmentVariable ("XTC_DEVICE_INDEX");
+			var joinedUsername = string.Format ("myemail_{0}@microsoft.com", deviceNumber);'
+
 -------
 
 Thank you to JWhite, Mahdi, Brandon, June, Mike Watson, Brad, AdamB, and Ian Leatherbury
