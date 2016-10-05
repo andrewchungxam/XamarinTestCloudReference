@@ -195,7 +195,8 @@ ANDROID : SETUP
         android:contentDescription="AddButton" /> `
         
 IOS : SETUP
-` protected void Initialize()
+` 
+protected void Initialize()
         {
             var barButton = new UIBarButtonItem(UIBarButtonSystemItem.Add)
             {
@@ -203,7 +204,8 @@ IOS : SETUP
             };
             NavigationItem.SetRightBarButtonItem (barButton, false);
             NavigationItem.RightBarButtonItem.Clicked += (sender, e) => { ShowTaskDetails(new TodoItem()); };
-        } `
+        } 
+        `
         
 
         
