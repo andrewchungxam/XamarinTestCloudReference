@@ -171,10 +171,48 @@ ADDING MULTIPLE USERS
 
 `			var joinedUsername = string.Format ("myemail_{0}@microsoft.com", deviceNumber);`
 
+CROSS-PLATFORM DIVERGENCE:
+` readonly Query AddTaskButtonUsingIds; `
+` readonly Query AddTaskButton; `
+
+` public HomeScreen(IApp app, Platform platform) : base(app, platform)
+        {
+            AddTaskButtonUsingIds = x => x.Marked("AddButton");
+
+            if (platform == Platform.iOS)
+                AddTaskButton = x => x.Class("UIBarButtonItem").Index(0);
+            else
+                AddTaskButton = x => x.Class("Button").Index(0);
+        } `
+
+
+ANDROID : SETUP
+`  <Button
+        android:id="@+id/AddButton"
+        android:text="Add Task"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="AddButton" /> `
+        
+IOS : SETUP
+` protected void Initialize()
+        {
+            var barButton = new UIBarButtonItem(UIBarButtonSystemItem.Add)
+            {
+                AccessibilityIdentifier = "AddButton"
+            };
+            NavigationItem.SetRightBarButtonItem (barButton, false);
+            NavigationItem.RightBarButtonItem.Clicked += (sender, e) => { ShowTaskDetails(new TodoItem()); };
+        } `
+        
+
+        
+        
+
+
 
 Xamarin Documentation has a more in-depth Cheat Sheet:
 https://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/
-
 -------
 
 Thank you to JWhite, Mahdi, Brandon, June, Mike Watson, Brad, AdamB, and Ian Leatherbury
