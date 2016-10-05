@@ -172,10 +172,14 @@ ADDING MULTIPLE USERS
 `			var joinedUsername = string.Format ("myemail_{0}@microsoft.com", deviceNumber);`
 
 CROSS-PLATFORM DIVERGENCE:
-``` readonly Query AddTaskButtonUsingIds; `
-``` readonly Query AddTaskButton; `
+``` 
+readonly Query AddTaskButtonUsingIds; 
+readonly Query AddTaskButton; 
+```
 
-``` public HomeScreen(IApp app, Platform platform) : base(app, platform)
+
+``` 
+  public HomeScreen(IApp app, Platform platform) : base(app, platform)
         {
             AddTaskButtonUsingIds = x => x.Marked("AddButton");
 
@@ -184,11 +188,12 @@ CROSS-PLATFORM DIVERGENCE:
             else
                 AddTaskButton = x => x.Class("Button").Index(0);
         } 
-        ```
+```
 
 
 ANDROID : SETUP
-```  <Button
+```  
+<Button
         android:id="@+id/AddButton"
         android:text="Add Task"
         android:layout_width="fill_parent"
