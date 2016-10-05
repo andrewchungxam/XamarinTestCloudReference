@@ -172,10 +172,10 @@ ADDING MULTIPLE USERS
 `			var joinedUsername = string.Format ("myemail_{0}@microsoft.com", deviceNumber);`
 
 CROSS-PLATFORM DIVERGENCE:
-` readonly Query AddTaskButtonUsingIds; `
-` readonly Query AddTaskButton; `
+``` readonly Query AddTaskButtonUsingIds; `
+``` readonly Query AddTaskButton; `
 
-` public HomeScreen(IApp app, Platform platform) : base(app, platform)
+``` public HomeScreen(IApp app, Platform platform) : base(app, platform)
         {
             AddTaskButtonUsingIds = x => x.Marked("AddButton");
 
@@ -183,19 +183,21 @@ CROSS-PLATFORM DIVERGENCE:
                 AddTaskButton = x => x.Class("UIBarButtonItem").Index(0);
             else
                 AddTaskButton = x => x.Class("Button").Index(0);
-        } `
+        } 
+        ```
 
 
 ANDROID : SETUP
-`  <Button
+```  <Button
         android:id="@+id/AddButton"
         android:text="Add Task"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="AddButton" /> `
+        android:contentDescription="AddButton" /> 
+```
         
 IOS : SETUP
-` 
+``` 
 protected void Initialize()
         {
             var barButton = new UIBarButtonItem(UIBarButtonSystemItem.Add)
@@ -205,8 +207,7 @@ protected void Initialize()
             NavigationItem.SetRightBarButtonItem (barButton, false);
             NavigationItem.RightBarButtonItem.Clicked += (sender, e) => { ShowTaskDetails(new TodoItem()); };
         } 
-        `
-        
+```        
 
         
         
