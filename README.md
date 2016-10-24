@@ -39,6 +39,7 @@ Complex Combinations:
 Common Assertions:
 <li>Assert.IsTrue(app.Query(q => q.Marked("logoutButton")).Any());
 <li>Assert.IsFalse(app.Query(q => q.Marked("logoutButton")).Any());
+<li>			Assert.IsNotNull(app.Query(x => x.Text(firstHospitalName)).Any());
 <li>app.WaitForElement(q => q.Marked("logoutButton"));
 </ul>
 <ul>
