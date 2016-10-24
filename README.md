@@ -108,10 +108,10 @@ Categories:
 
 <ul>
 <li>Cross Platform Properties you can Access:</li>
-<li>Properties you can access:</li>
-<li>Android/iOS -> “id"</li>
-<li>Android -> “contentDescription"</li>
-<li>iOS -> “accessibilityLabel” or "accessibilityIdentifier"</li>
+<li>Marked will access Id, label, and text:</li>
+<li>so you'll be looking for on Android/iOS -> "label", “id" respectively</li>
+<li>Android -> “contentDescription" => label on repl </li>
+<li>iOS -> “accessibilityLabel” or "accessibilityIdentifier" => Id on Repl</li>
 </ul>
 
 
