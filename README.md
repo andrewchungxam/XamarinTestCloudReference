@@ -215,6 +215,10 @@ protected void Initialize()
         } 
 ```        
 
+WEBVIEW SHORTCUT:
+ a. iOS: app.Query(x => x.WebView().Invoke("request").Invoke("URL").Invoke("absoluteString"))
+ b. Android: app.Query(x => x.WebView().Invoke("getUrl"))
+
         
         
 
