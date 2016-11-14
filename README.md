@@ -219,6 +219,10 @@ WEBVIEW SHORTCUT:
  a. iOS: app.Query(x => x.WebView().Invoke("request").Invoke("URL").Invoke("absoluteString"))
  b. Android: app.Query(x => x.WebView().Invoke("getUrl"))
 
+ENTER TEXT (need for certain Hybrid situations):
+app.Tap("searchButtonBackground");
+app.Query(x => x.Class("android.widget.EditText").Invoke("setText", "trump"));
+app.PressEnter();
         
         
 
