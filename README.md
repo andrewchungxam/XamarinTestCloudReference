@@ -92,6 +92,12 @@ Command Line:<br/>
 Windows:<br/>
 packages\Xamarin.UITest.[version]\tools\test-cloud.exe submit yourAppFile.apk thePRIVATENotRealAPINumber00071 --devices 4b1b0c03 --series "master" --locale "en_US" --app-name "SimpleUITestApp" --user myemail@xamarin.com --assembly-dir pathToTestDllFolder
 
+Example:
+(From here)
+C:\Users\Administrator\Desktop\CreditCardValidator.Droid (1)\CreditCardValidator.Droid\packages\Xamarin.UITest.2.0.0\tools
+(Run this)
+test-cloud.exe submit "C:\Users\Administrator\Desktop\CreditCardValidator.Droid (1)\CreditCardValidator.Droid\CreditCardValidator.Droid\bin\Release\com.xamarin.example.creditcardvalidator.apk" aasd_THIS_IS_WHERE_YOUR_API_KEY_GOES_34341 --devices=8c67ffb4  --assembly-dir "C:\Users\Administrator\Desktop\CreditCardValidator.Droid (1)\CreditCardValidator.Droid\CreditCardValidator.Droid.UITests\bin\Release" --user my.email.addy@xamarin.com
+
 OS X:<br/>
 mono packages/Xamarin.UITest.[version]/tools/test-cloud.exe submit yourAppFile.apk thePRIVATENotRealAPINumber00071 --devices 4b1b0c03 --series "master" --locale "en_US" --app-name "SimpleUITestApp" --user myemail@xamarin.com --assembly-dir pathToTestDllFolder
 
