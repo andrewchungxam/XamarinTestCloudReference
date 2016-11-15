@@ -237,6 +237,10 @@ app.PressEnter();
 
 Xamarin Documentation has a more in-depth Cheat Sheet:
 https://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/
+
+Guide created for TFS/VSTS with a lot of simple guides:
+https://www.visualstudio.com/en-us/docs/build/steps/test/xamarin-test-cloud
+
 -------
 
 Thank you to JWhite, Mahdi, Brandon, June, Mike Watson, Brad, AdamB, and Ian Leatherbury
