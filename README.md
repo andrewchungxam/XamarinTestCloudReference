@@ -224,6 +224,7 @@ protected void Initialize()
 WEBVIEW SHORTCUT:
  a. iOS: app.Query(x => x.WebView().Invoke("request").Invoke("URL").Invoke("absoluteString"))
  b. Android: app.Query(x => x.WebView().Invoke("getUrl"))
+ c. If HTML is embedded on an internal resource - try this: app.Query(x => x.Css("body"));
 
 ENTER TEXT (need for certain Hybrid situations):
 ```
