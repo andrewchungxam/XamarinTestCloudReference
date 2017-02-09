@@ -242,6 +242,48 @@ https://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/
 Guide created for TFS/VSTS with a lot of simple guides:
 https://www.visualstudio.com/en-us/docs/build/steps/test/xamarin-test-cloud
 
+
+SOMETMES YOU NEED TO DOWNLOAD THE ANDROID APP ON YOUR DEVICE (FOR EXAMPLE TO ACCESS AN APP FROM THE GOOGLE PLAY STORE):
+Connect your device to your Mac.
+Open Terminal:
+Go here:
+cd ~/Library/Developer/Xamarin/android-sdk-macosx/platform-tools
+
+NOTE // 
+Do not go here (use adb tools above):
+(NOT THIS) cd ~/Library/Android/sdk/platform-tools (NOT THIS)
+
+Look for your package:
+(notice the use of the "./" before command to use a local command vs a global command).
+
+List your 3rd-party packages 
+./adb shell pm list packages -f -3
+
+Or skip ahead and use this:
+./adb shell pm path your-package-name.
+./adb shell pm path com.myCompanyApp.android
+
+OUTPUT WILL LOOK LIKE THIS:
+package:/data/app/XX.XX.XX.apk=YY.YY.YY
+FROM ABOVE - YOU WANT THIS:
+/data/app/XX.XX.XX.apk
+
+FOR ANDROID VERSIONS BELOW 7.0//
+THEN THIS:
+(GENERAL COMMAND) ./adb pull full/directory/of/the.apk
+(Example of SPECIFIC COMMAND) ./adb pull /data/app/com.myCompanyApp.android-1/mybase.apk 
+
+FOR ANDROID VERSIONS BELOW 7.0+
+(GENERAL COMMAND)adb shell cp /data/app/com.theCompanyName.android-1/base.apk /storage/emulated/0/Download
+(GENERAL COMMAND)adb pull /storage/emulated/0/Download/base.apk
+
+NOW YOUR APK FILE WILL DOWNLOAD THE DIRECTORY WHERE YOU ARE RUNNING YOUR COMMANDS:
+In this case - it will be called base.apk
+
+IN TERMINAL - you can type the following to open a FINDER WINDOW and then copy your new file base.apk to the directory of your choosing:
+open .
+
+
 -------
 
 Thank you to JWhite, Mahdi, Brandon, June, Mike Watson, Brad, AdamB, and Ian Leatherbury
