@@ -287,20 +287,24 @@ open .
 SITUATIONS WHERE WARNINGS MAY OR MAY-NOT POP-UP
 
 ```   
-		[Test]
-		public void MyImportantMethod ()
-		{
-			 try 
-    {
-    //DISMISS POP-UP HERE
-				//IT IS IMPORTANT TO NOT HAVE SCREENSHOTS HERE OR YOUR SCREENSHOTS WILL BE OUT OF SYNC WHICH WILL TRIGGER ERRORS
-    app.WaitForElement (x => x.Id ("welcome1"));
-				app.Tap (x => x.Id ("welcome"));
-    
-				} catch (Exception e) {
-				Console.WriteLine ("{0} Exception caught.", e);
-			}
-   // here is where you do the rest of your method
+[Test]
+public void MyImportantMethod ()
+{
+//ADD THE FOLLOWING TO YOUR METHOD
+	try 
+	{
+	//DISMISS POP-UP HERE
+	//IT IS IMPORTANT TO NOT HAVE SCREENSHOTS HERE OR YOUR SCREENSHOTS WILL BE OUT OF SYNC WHICH WILL TRIGGER ERRORS
+    	app.WaitForElement (x => x.Id ("welcome1"));
+	app.Tap (x => x.Id ("welcome"));
+	} 
+	catch (Exception e) 
+	{
+	Console.WriteLine ("{0} Exception caught.", e);
+	}
+//ADD THE ABOVE TO YOUR METHOD
+
+// here is where you do the rest of your method
    app.Tap("Sign-in");
    }
 ```   
