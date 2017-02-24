@@ -221,6 +221,7 @@ protected void Initialize()
         } 
 ```        
 
+-----
 WEBVIEW SHORTCUT:
 The below will get you the URL which you'll need to inspect
  a. iOS: app.Query(x => x.WebView().Invoke("request").Invoke("URL").Invoke("absoluteString"))
@@ -234,11 +235,13 @@ The below will get you the URL which you'll need to inspect
  
  One you find an element you care about you can interact with it.  
  As an example - let's say you care about this element:
- <span class="thing that I am interested in">
- 
+```
+<span class="thing that I am interested in">
+ ```
  Then you can interact with it, like this:
+ ```
  app.Tap(x=>x.CSS(".thing.that.I.am.interested.in"));  //note how . marks preceed the entry and fill in the spaces as well.
- 
+ ```
  You preceeded the class with a "."
  If it were an ID, you can preceed it with a "#" mark.
  
@@ -252,15 +255,10 @@ app.Tap("searchButtonBackground");
 app.Query(x => x.Class("android.widget.EditText").Invoke("setText", "The Text I want to Enter"));
 app.PressEnter();
 ```     
-        
+-----        
 
 
 
-Xamarin Documentation has a more in-depth Cheat Sheet:
-https://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/
-
-Guide created for TFS/VSTS with a lot of simple guides:
-https://www.visualstudio.com/en-us/docs/build/steps/test/xamarin-test-cloud
 
 
 SOMETMES YOU NEED TO DOWNLOAD THE ANDROID APP ON YOUR DEVICE (FOR EXAMPLE TO ACCESS AN APP FROM THE GOOGLE PLAY STORE):
@@ -333,6 +331,13 @@ public void MyImportantMethod ()
 
 
 
+-------
+
+Xamarin Documentation has a more in-depth Cheat Sheet:
+https://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/
+
+Guide created for TFS/VSTS with a lot of simple guides:
+https://www.visualstudio.com/en-us/docs/build/steps/test/xamarin-test-cloud
 -------
 
 Thank you to JWhite, Mahdi, Brandon, June, Mike Watson, Brad, AdamB, and Ian Leatherbury
