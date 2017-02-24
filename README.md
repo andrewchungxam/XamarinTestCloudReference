@@ -283,6 +283,31 @@ In this case - it will be called base.apk
 IN TERMINAL - you can type the following to open a FINDER WINDOW and then copy your new file base.apk to the directory of your choosing:
 open .
 
+-----
+SITUATIONS WHERE WARNING MAY OR MAY-NOT POP-UP
+
+		[Test]
+		public void MyImportantMethod ()
+		{
+			 try 
+    {
+    //DISMISS POP-UP HERE
+				//IT IS IMPORTANT TO NOT HAVE SCREENSHOTS HERE OR YOUR SCREENSHOTS WILL BE OUT OF SYNC WHICH WILL TRIGGER ERRORS
+    app.WaitForElement (x => x.Id ("welcome1"));
+				app.Tap (x => x.Id ("welcome"));
+    
+				} catch (Exception e) {
+				Console.WriteLine ("{0} Exception caught.", e);
+			}
+   // here is where you do the rest of your method
+   app.Tap("Sign-in");
+   
+   }
+
+
+
+
+
 
 -------
 
