@@ -284,7 +284,7 @@ IN TERMINAL - you can type the following to open a FINDER WINDOW and then copy y
 open .
 
 -----
-SITUATIONS WHERE WARNING MAY OR MAY-NOT POP-UP
+SITUATIONS WHERE WARNINGS MAY OR MAY-NOT POP-UP
 
 		[Test]
 		public void MyImportantMethod ()
