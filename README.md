@@ -286,6 +286,7 @@ open .
 -----
 SITUATIONS WHERE WARNINGS MAY OR MAY-NOT POP-UP
 
+```   
 		[Test]
 		public void MyImportantMethod ()
 		{
@@ -301,9 +302,8 @@ SITUATIONS WHERE WARNINGS MAY OR MAY-NOT POP-UP
 			}
    // here is where you do the rest of your method
    app.Tap("Sign-in");
-   
    }
-
+```   
 
 
 
