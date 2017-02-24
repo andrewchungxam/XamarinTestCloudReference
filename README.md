@@ -222,8 +222,28 @@ protected void Initialize()
 ```        
 
 WEBVIEW SHORTCUT:
+The below will get you the URL which you'll need to inspect
  a. iOS: app.Query(x => x.WebView().Invoke("request").Invoke("URL").Invoke("absoluteString"))
  b. Android: app.Query(x => x.WebView().Invoke("getUrl"))
+ 
+ NOW INSPECT THAT URL
+ You can view the CSS of that webview - you can do this with Chrome for example:
+ Chrome > View > Developer > Developer Tools
+ 
+ On the right panel - you'll see the HTML/CSS.  On the upper left of that panel - you'll see a toggle-able icon (a square with an arrow in it).  Toggling that icon will switch between allowing you to navigate through the webpage -- or clicking a specific element and inspecting it.  You'll need to do both.
+ 
+ One you find an element you care about you can interact with it.  
+ As an example - let's say you care about this element:
+ <span class="thing that I am interested in">
+ 
+ Then you can interact with it, like this:
+ app.Tap(x=>x.CSS(".thing.that.I.am.interested.in"));  //note how . marks preceed the entry and fill in the spaces as well.
+ 
+ You preceeded the class with a "."
+ If it were an ID, you can preceed it with a "#" mark.
+ 
+ 
+ 
  c. If HTML is embedded on an internal resource - try this: app.Query(x => x.Css("body"));
 
 ENTER TEXT (need for certain Hybrid situations):
