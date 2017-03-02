@@ -330,7 +330,7 @@ public void MyImportantMethod ()
 IF STATEMENTS
 You should in general not sure IF statements - you want deterministic tests:
 
-if(!app.Query(x=>x.Marked("foo").Any())
+if(!app.Query(x=>x.Marked("foo")).Any())
 {
 //DO THIS
 }
