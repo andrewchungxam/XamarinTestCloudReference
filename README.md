@@ -340,6 +340,11 @@ if(!app.Query(x=>x.Marked("foo")).Any())
 
 -------
 
+TUTORIAL ON ADDING Calabash to Swift/Objective-C projects:
+https://github.com/calabash/calabash-ios/wiki/Tutorial%3A-How-to-add-Calabash-to-Xcode
+Calabash for iOS Github page:
+https://github.com/calabash/calabash-ios
+
 Xamarin Documentation has a more in-depth Cheat Sheet:
 https://developer.xamarin.com/guides/testcloud/uitest/cheatsheet/
 
