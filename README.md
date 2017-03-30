@@ -88,6 +88,7 @@ Setup Issues:
 - iOS - make sure to add the Calabash Test Server to your app - and make start it in your app delegate</li>
 </ol>
 
+------------------------------------------------
 Command Line:<br/>
 Windows:<br/>
 packages\Xamarin.UITest.[version]\tools\test-cloud.exe submit yourAppFile.apk thePRIVATENotRealAPINumber00071 --devices 4b1b0c03 --series "master" --locale "en_US" --app-name "SimpleUITestApp" --user myemail@xamarin.com --assembly-dir pathToTestDllFolder
@@ -113,6 +114,7 @@ mono packages/Xamarin.UITest.1.3.15/tools/test-cloud.exe submit Droid/bin/Debug/
 Categories:
 --category "myFavorite"
 
+------------------------------------------------------------
 <ul>
 <li>Cross Platform Properties you can Access:</li>
 <li>Marked will access Id, label, and text:</li>
