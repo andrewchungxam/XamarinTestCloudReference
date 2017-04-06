@@ -339,6 +339,12 @@ if(!app.Query(x=>x.Marked("foo")).Any())
 -------
 # Date Picker
 
+Date picker - Android // 
+1) You can either invoke native methods:
+https://developer.xamarin.com/api/member/Xamarin.UITest.IApp.Invoke/p/System.String/System.Object/
+
+2) or try manipulating the date picker in the following way:
+
 First - click into the date field to bring up the spinner:
 ```
 app.Tap("the_date_spinner_object");
