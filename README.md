@@ -336,8 +336,35 @@ if(!app.Query(x=>x.Marked("foo")).Any())
 {
 //DO THIS
 }
+-------
+# Date Picker
 
+First - click into the date field to bring up the spinner:
+```app.Tap("the_date_spinner_object");
 
+Second - you'll see something like this:
+
+```
+            [DatePicker] id: "the_datePicker"
+              [LinearLayout] id: "pickers"
+                [NumberPicker] id: "month"
+                  [NumberPicker$MyCustomEditText] id: "the_numberpicker_input" text: "Jun"
+                [NumberPicker] id: "year"
+                  [NumberPicker$MyCustomEditText] id: "the_numberpicker_input" text: "2017"
+        [LinearLayout] id: "buttonPanel"
+          [AppCompatButton] id: "cancel_button" text: "Cancel"
+          [AppCompatButton] id: "ok_button" text: "OK"
+```
+
+```
+//pick the Month spinner
+app.Tap("the_numberpicker_input");
+app.EnterText("May");
+//pick the Year spinner
+app.Tap(x=>x.Marked("the_numberpicker_input").Index(1));
+app.EnterText("2016");
+app.Tap(x=>x.Marked("ok_button"));
+```
 
 
 -------
