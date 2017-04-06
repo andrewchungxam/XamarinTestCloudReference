@@ -350,12 +350,12 @@ Second - you'll see something like this:
             [DatePicker] id: "the_datePicker"
               [LinearLayout] id: "pickers"
                 [NumberPicker] id: "month"
-                  [NumberPicker$MyCustomEditText] id: "the_numberpicker_input" text: "Jun"
+                  [NumberPicker] id: "the_numberpicker_input" text: "Jun"
                 [NumberPicker] id: "year"
-                  [NumberPicker$MyCustomEditText] id: "the_numberpicker_input" text: "2017"
+                  [NumberPicker] id: "the_numberpicker_input" text: "2017"
         [LinearLayout] id: "buttonPanel"
-          [AppCompatButton] id: "cancel_button" text: "Cancel"
-          [AppCompatButton] id: "ok_button" text: "OK"
+          [Button] id: "cancel_button" text: "Cancel"
+          [Button] id: "ok_button" text: "OK"
 ```
 
 
