@@ -363,6 +363,14 @@ Second - you'll see something like this:
 //pick the Month spinner
 app.Tap("the_numberpicker_input");
 app.EnterText("May");
+//sometimes you may need to split the month into it's letters OR clear the text first
+app.EnterText("M");
+app.EnterText("a");
+app.EnterText("y");
+// OR Clear the Text first
+app.ClearText();
+app.EnterText("May");
+
 //pick the Year spinner
 app.Tap(x=>x.Marked("the_numberpicker_input").Index(1));
 app.EnterText("2016");
