@@ -340,7 +340,9 @@ if(!app.Query(x=>x.Marked("foo")).Any())
 # Date Picker
 
 First - click into the date field to bring up the spinner:
-```app.Tap("the_date_spinner_object");
+```
+app.Tap("the_date_spinner_object");
+```
 
 Second - you'll see something like this:
 
@@ -355,6 +357,7 @@ Second - you'll see something like this:
           [AppCompatButton] id: "cancel_button" text: "Cancel"
           [AppCompatButton] id: "ok_button" text: "OK"
 ```
+
 
 ```
 //pick the Month spinner
