@@ -367,7 +367,7 @@ app.EnterText("May");
 app.EnterText("M");
 app.EnterText("a");
 app.EnterText("y");
-// you can also preceed with clear first before you type in the months
+// you can also preceed with clear first before you type in the month
 app.ClearText();
 //pick the Year spinner
 app.Tap(x=>x.Marked("the_numberpicker_input").Index(1));
