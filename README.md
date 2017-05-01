@@ -369,12 +369,18 @@ Second - you'll see something like this:
 //pick the Month spinner
 app.Tap("the_numberpicker_input");
 app.EnterText("May");
-//sometimes you may need to split the month into it's letters
-app.EnterText("M");
-app.EnterText("a");
-app.EnterText("y");
-// you can also preceed with clear first before you type in the month
-app.ClearText();
+
+//SOMETIMES you may need to split the month into it's letters
+//app.EnterText("M");
+//app.EnterText("a");
+//app.EnterText("y");
+
+// SOMETIMES BEFORE PICKING THE MONTH you can also preceed with clear first before you type in the month
+//app.ClearText();
+
+// IF THE DATE IS STILL EDITABLE, YOU MAY WANT TO TAP THE MONTH INPUT AGAIN SO IT DOESN'T GET "OVERWRITTEN" BY LATER STEPS
+// app.Tap("the_numberpicker_input");
+
 //pick the Year spinner
 app.Tap(x=>x.Marked("the_numberpicker_input").Index(1));
 app.EnterText("2016");
